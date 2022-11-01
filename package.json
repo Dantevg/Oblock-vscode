@@ -2,7 +2,7 @@
   "name": "oblock-language",
   "displayName": "Oblock language",
   "description": "Syntax highlighting for the Oblock language",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "RedPolygon",
   "repository": "https://github.com/Dantevg/Oblock-vscode",
   "engines": {
