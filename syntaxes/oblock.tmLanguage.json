@@ -3,27 +3,137 @@
 	"name": "Oblock",
 	"patterns": [
 		{
-			"include": "#keywords"
+			"include": "#comments"
 		},
 		{
-			"include": "#strings"
+			"include": "#expression"
 		}
 	],
 	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.oblock",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.oblock",
-			"begin": "\"",
-			"end": "\"",
+		"comments": {
 			"patterns": [
 				{
-					"name": "constant.character.escape.oblock",
-					"match": "\\\\."
+					"name": "comment.line.double-dash.oblock",
+					"match": "\\--[^\n]*"
+				},
+				{
+					"name": "comment.block.oblock",
+					"begin": "\\(:",
+					"end": ":\\)"
+				}
+			]
+		},
+		"expression": {
+			"patterns": [
+				{
+					"include": "#keywords"
+				},
+				{
+					"include": "#definition"
+				},
+				{
+					"include": "#operators"
+				},
+				{
+					"include": "#punctuation"
+				},
+				{
+					"include": "#booleans"
+				},
+				{
+					"include": "#numbers"
+				},
+				{
+					"include": "#strings"
+				},
+				{
+					"include": "#variables"
+				}
+			]
+		},
+		"keywords": {
+			"name": "keyword.control.oblock",
+			"match": "\\b(if|else|while|for|in|return|yield|break|continue)\\b"
+		},
+		"definition": {
+			"name": "storage.type.oblock",
+			"match": "\\b(var|const)\\b"
+		},
+		"operators": {
+			"name": "keyword.operator.oblock",
+			"match": "[~!@#$%^&*-+\\|<>?/]{1,2}"
+		},
+		"punctuation": {
+			"patterns": [
+				{
+					"name": "storage.type.function.arrow",
+					"match": "=>"
+				},
+				{
+					"name": "keyword.operator.assignment.oblock",
+					"match": "="
+				},
+				{
+					"name": "punctuation.dot.oblock",
+					"match": "\\."
+				},
+				{
+					"name": "punctuation.comma.oblock",
+					"match": ","
+				}
+			]
+		},
+		"booleans": {
+			"name": "constant.language.oblock",
+			"match": "\\b(true|false)\\b"
+		},
+		"numbers": {
+			"name": "constant.numeric.oblock",
+			"match": "\\b[0-9]+"
+		},
+		"strings": {
+			"patterns": [
+				{
+					"name": "string.quoted.single.oblock",
+					"begin": "'",
+					"end": "'",
+					"patterns": [
+						{
+							"name": "constant.character.escape",
+							"match": "\\\\."
+						}
+					]
+				},
+				{
+					"name": "string.quoted.double.oblock",
+					"begin": "\"",
+					"end": "\"",
+					"patterns": [
+						{
+							"name": "constant.character.escape",
+							"match": "\\\\."
+						}
+					]
+				}
+			]
+		},
+		"variables": {
+			"patterns": [
+				{
+					"name": "variable.language.oblock",
+					"match": "\\b(this)\\b"
+				},
+				{
+					"name": "entity.name.class.oblock",
+					"match": "\\b[A-Z]\\w*\\b"
+				},
+				{
+					"match": "(\\w*)\\s*(\\()",
+					"captures": {
+						"1": {
+							"name": "entity.name.function.oblock"
+						}
+					}
 				}
 			]
 		}
