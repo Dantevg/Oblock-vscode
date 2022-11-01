@@ -3,6 +3,7 @@
   "displayName": "Oblock language",
   "description": "Syntax highlighting for the Oblock language",
   "version": "0.0.1",
+  "publisher": "RedPolygon",
   "repository": "https://github.com/Dantevg/Oblock-vscode",
   "engines": {
     "vscode": "^1.72.0"
