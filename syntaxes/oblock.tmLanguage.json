@@ -38,7 +38,7 @@
 					"include": "#punctuation"
 				},
 				{
-					"include": "#booleans"
+					"include": "#constants"
 				},
 				{
 					"include": "#numbers"
@@ -83,9 +83,9 @@
 				}
 			]
 		},
-		"booleans": {
+		"constants": {
 			"name": "constant.language.oblock",
-			"match": "\\b(true|false)\\b"
+			"match": "\\b(true|false|nil)\\b"
 		},
 		"numbers": {
 			"name": "constant.numeric.oblock",
