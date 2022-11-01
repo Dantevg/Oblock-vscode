@@ -53,7 +53,7 @@
 		},
 		"keywords": {
 			"name": "keyword.control.oblock",
-			"match": "\\b(if|else|while|for|in|return|yield|break|continue)\\b"
+			"match": "\\b(if|else|while|for|in|return|yield|break|continue|and|or)\\b"
 		},
 		"definition": {
 			"name": "storage.type.oblock",
@@ -61,7 +61,7 @@
 		},
 		"operators": {
 			"name": "keyword.operator.oblock",
-			"match": "[~!@#$%^&*-+\\|<>?/]{1,2}"
+			"match": "[~!@#$%^&*\\-+\\\\|<>?/]{1,2}"
 		},
 		"punctuation": {
 			"patterns": [
