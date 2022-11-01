@@ -5,6 +5,7 @@ language.
 
 ## Features
 The extension automatically registers for `.ob` files.
+
 ![Screenshot](img/screenshot.png)
 
 ## Known Issues
