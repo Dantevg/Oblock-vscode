@@ -1,0 +1,25 @@
+{
+  "name": "oblock-language",
+  "displayName": "Oblock language",
+  "description": "Syntax highlighting for the Oblock language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.72.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "oblock",
+      "aliases": ["Oblock", "oblock"],
+      "extensions": [".ob"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "oblock",
+      "scopeName": "source.oblock",
+      "path": "./syntaxes/oblock.tmLanguage.json"
+    }]
+  }
+}
