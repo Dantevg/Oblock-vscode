@@ -12,5 +12,12 @@ The extension automatically registers for `.ob` files.
 - Parentheses-less function calls do not get highlighted as functions.
 
 ## Release Notes
-### 1.0.0
+### 0.0.3
+- Add missing `nil` constant
+
+### 0.0.2
+- Add missing `and` and `or` keywords
+- Fix `-` and `\` operators
+
+### 0.0.1
 Initial release, for Oblock 0.4 in-dev.
