@@ -12,6 +12,9 @@ The extension automatically registers for `.ob` files.
 - Parentheses-less function calls do not get highlighted as functions.
 
 ## Release Notes
+### 0.0.4
+- Fix block comments being highlighted as function call arguments
+
 ### 0.0.3
 - Add missing `nil` constant
 
