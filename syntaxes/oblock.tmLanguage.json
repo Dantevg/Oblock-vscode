@@ -37,7 +37,7 @@
 		},
 		"definition": {
 			"name": "storage.type.oblock",
-			"match": "\\b(var|const)\\b"
+			"match": "\\b(var|const|rec)\\b"
 		},
 		"operators": {
 			"name": "keyword.operator.oblock",
